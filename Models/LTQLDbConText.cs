@@ -11,9 +11,8 @@ namespace LTQLDb.Models
             : base("name=LTQLDbConText")
         {
         }
-
-        public virtual DbSet<Student> Students { get; set; }
         public virtual DbSet<Person> Persons { get; set; }
+        public virtual DbSet<Employee> Employees { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
