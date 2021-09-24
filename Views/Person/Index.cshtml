@@ -27,7 +27,7 @@
             @Html.DisplayFor(modelItem => item.PersonName)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.address)
+            @Html.Raw(item.address)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.PersonID }) |
