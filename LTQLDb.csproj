@@ -128,24 +128,20 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\EmployeesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PersonController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202109101601441_Create.cs" />
-    <Compile Include="Migrations\202109101601441_Create.Designer.cs">
-      <DependentUpon>202109101601441_Create.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202109140738471_Create_Table_Employees.cs" />
-    <Compile Include="Migrations\202109140738471_Create_Table_Employees.Designer.cs">
-      <DependentUpon>202109140738471_Create_Table_Employees.cs</DependentUpon>
+    <Compile Include="Migrations\202109240648017_1.cs" />
+    <Compile Include="Migrations\202109240648017_1.Designer.cs">
+      <DependentUpon>202109240648017_1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\Employee.cs" />
+    <Compile Include="Models\AutogenK.cs" />
     <Compile Include="Models\LTQLDbConText.cs" />
     <Compile Include="Models\Person.cs" />
+    <Compile Include="Models\StringProcess.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -189,12 +185,6 @@
     <Content Include="Views\Person\Details.cshtml" />
     <Content Include="Views\Person\Edit.cshtml" />
     <Content Include="Views\Person\Index.cshtml" />
-    <Content Include="Views\Student\Index.cshtml" />
-    <Content Include="Views\Employees\Create.cshtml" />
-    <Content Include="Views\Employees\Delete.cshtml" />
-    <Content Include="Views\Employees\Details.cshtml" />
-    <Content Include="Views\Employees\Edit.cshtml" />
-    <Content Include="Views\Employees\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -213,11 +203,8 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202109101601441_Create.resx">
-      <DependentUpon>202109101601441_Create.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202109140738471_Create_Table_Employees.resx">
-      <DependentUpon>202109140738471_Create_Table_Employees.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202109240648017_1.resx">
+      <DependentUpon>202109240648017_1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

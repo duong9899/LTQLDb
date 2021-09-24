@@ -12,7 +12,6 @@ namespace LTQLDb.Models
         {
         }
         public virtual DbSet<Person> Persons { get; set; }
-        public virtual DbSet<Employee> Employees { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

@@ -12,17 +12,16 @@ namespace LTQLDb.Controllers
 {
     public class PersonController : Controller
     {
-        
         private LTQLDbConText db = new LTQLDbConText();
-
-        // GET: People
+        AutogenK genkey = new AutogenK();
+        // GET: Person
         public ActionResult Index()
         {
             return View(db.Persons.ToList());
         }
 
-        // GET: People/Details/5
-        public ActionResult Details(int? id)
+        // GET: Person/Details/5
+        public ActionResult Details(string id)
         {
             if (id == null)
             {
@@ -36,13 +35,18 @@ namespace LTQLDb.Controllers
             return View(person);
         }
 
-        // GET: People/Create
+        // GET: Person/Create
         public ActionResult Create()
         {
+            var PsID = db.Persons.OrderByDescending(m => m.PersonID).FirstOrDefault().PersonID;
+
+            var newID = genkey.generatekey(PsID, 2);
+
+            ViewBag.newperID = newID;
             return View();
         }
 
-        // POST: People/Create
+        // POST: Person/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -59,8 +63,8 @@ namespace LTQLDb.Controllers
             return View(person);
         }
 
-        // GET: People/Edit/5
-        public ActionResult Edit(int? id)
+        // GET: Person/Edit/5
+        public ActionResult Edit(string id)
         {
             if (id == null)
             {
@@ -74,7 +78,7 @@ namespace LTQLDb.Controllers
             return View(person);
         }
 
-        // POST: People/Edit/5
+        // POST: Person/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -90,8 +94,8 @@ namespace LTQLDb.Controllers
             return View(person);
         }
 
-        // GET: People/Delete/5
-        public ActionResult Delete(int? id)
+        // GET: Person/Delete/5
+        public ActionResult Delete(string id)
         {
             if (id == null)
             {
@@ -105,10 +109,10 @@ namespace LTQLDb.Controllers
             return View(person);
         }
 
-        // POST: People/Delete/5
+        // POST: Person/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int id)
+        public ActionResult DeleteConfirmed(string id)
         {
             Person person = db.Persons.Find(id);
             db.Persons.Remove(person);

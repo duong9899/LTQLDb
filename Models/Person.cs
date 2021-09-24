@@ -9,8 +9,21 @@ namespace LTQLDb.Models
     public class Person
     {
         [Key]
-        public  int PersonID { get; set; }
-        public string PersonName { get; set; }
-        public string address { get; set; }
+
+        [Required(ErrorMessage = "Hãy Nhập ID")]
+
+        public String PersonID { get; set; }
+
+
+
+        [Required(ErrorMessage = "Hãy Nhập Tên")]
+
+        public String PersonName { get; set; }
+
+
+
+        [Required(ErrorMessage = "Hãy Nhập Địa Chỉ")]
+
+        public String address { get; set; }
     }
 }
