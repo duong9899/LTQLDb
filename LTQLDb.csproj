@@ -128,6 +128,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PersonController.cs" />
     <Compile Include="Global.asax.cs">
@@ -137,8 +138,14 @@
     <Compile Include="Migrations\202109240648017_1.Designer.cs">
       <DependentUpon>202109240648017_1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202110010829509_DM.cs" />
+    <Compile Include="Migrations\202110010829509_DM.Designer.cs">
+      <DependentUpon>202110010829509_DM.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Account.cs" />
     <Compile Include="Models\AutogenK.cs" />
+    <Compile Include="Models\Encrytion.cs" />
     <Compile Include="Models\LTQLDbConText.cs" />
     <Compile Include="Models\Person.cs" />
     <Compile Include="Models\StringProcess.cs" />
@@ -533,6 +540,8 @@
     <Content Include="Views\Person\Details.cshtml" />
     <Content Include="Views\Person\Edit.cshtml" />
     <Content Include="Views\Person\Index.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -553,6 +562,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202109240648017_1.resx">
       <DependentUpon>202109240648017_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110010829509_DM.resx">
+      <DependentUpon>202110010829509_DM.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
